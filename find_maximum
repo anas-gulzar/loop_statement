@@ -1,1 +1,13 @@
+// Online C compiler to run C program online
+#include <stdio.h>
 
+int main() {
+    int max=0;
+    int arr[4]={1,2,3,4};
+    for(int i=0; i<=3; i++){
+        if(max<arr[i]){
+            max=arr[i];
+        }
+    }
+    printf("max value is :%d",max);
+}
