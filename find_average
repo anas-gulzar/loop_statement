@@ -1,1 +1,14 @@
+#include <stdio.h>
+int main(){
+float avg;
+int n;
+int sum=0;
+printf("enter your value :");
+scanf("%d",&n);
+for(int i=1; i<=n; i++){
+    sum=sum+i;
+}
 
+    avg = (float)sum / n;
+    printf("Average = %.2f\n", avg);
+}
