@@ -1,1 +1,18 @@
+#include <stdio.h>
 
+int main() {
+    int num;
+    printf("enter your value:");
+    scanf("%d", &num);
+    
+    int fac=0;
+    int re=0;
+    
+    while(num>0){
+        re=num%10;
+        fac=fac+1;
+        num=num/10;
+    }
+    printf("your answer is %d", fac);
+    return 0;
+}
