@@ -1,1 +1,23 @@
+#include <stdio.h>
 
+int main(){
+    int num;
+    printf("enter numbers :");
+    scanf("%d",&num);
+
+    int digit;
+    int odd = 0;
+    int even = 0;
+
+    while(num>0){
+        digit = num % 10;
+
+        if(digit % 2 == 0){
+            even++;
+        }else{
+            odd++;
+        }
+        num = num / 10;
+    }
+    printf("\n odd : %d \n even : %d",odd,even);
+}
