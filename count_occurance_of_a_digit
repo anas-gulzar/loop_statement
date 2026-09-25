@@ -1,1 +1,23 @@
+#include <stdio.h>
 
+int main() {
+    int num;
+    printf("enter your number :");
+    scanf("%d",&num);
+
+    int trgt;
+    printf("enter target digit :");
+    scanf("%d",&trgt);
+    
+    int digit = 0;
+    int count = 0;
+
+    while(num > 0){
+        digit = num % 10;
+        if(digit == trgt){
+            count++;
+        }
+        num = num / 10;
+    }
+    printf("total occurrences : %d",count);
+}
