@@ -1,1 +1,22 @@
+#include <stdio.h>
 
+int main() {
+    int num;
+    printf("enter numbers :");
+    scanf("%d",&num);
+    int digit = 0;
+    int even = 0;
+    int odd = 0;
+
+    while(num>0){
+        digit = num % 10;
+        if(digit % 2 == 0){
+            even = even + digit;
+        }else{
+            odd = odd + digit;
+        }
+        num = num/10;
+    }
+    printf("sum of even digits : %d \n",even);
+    printf("sum of odd digits : %d",odd);
+}
