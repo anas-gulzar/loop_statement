@@ -1,1 +1,17 @@
+#include <stdio.h>
 
+int main() {
+    int num;
+    printf("enter number :");
+    scanf("%d",&num);
+    
+    int digit;
+    int mul = 1;
+
+    while(num>0){
+        digit = num % 10;
+        mul = mul * digit;
+        num = num / 10;
+    }
+    printf("product of digits : %d",mul);
+}
