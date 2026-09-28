@@ -4,22 +4,7 @@ int main() {
     int num;
     printf("enter numbers :");
     scanf("%d",&num);
-    int digit;
-    int largest = 0;
-    int smallest = 9;
-    int difference = 0;
-
-    while(num>0){
-        digit = num % 10 ;
-        if(digit > largest){
-            largest = digit ;
-        }
-        
-        if(digit < smallest){
-            smallest = digit ;
-        }
-        num = num /10 ;
-    }
+    int digit
     difference = largest - smallest;
 
     printf("%d",difference);
