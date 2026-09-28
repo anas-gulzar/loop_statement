@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int num = 1239;
+    int num;
+    printf("enter numbers :");
+    scanf("%d",&num);
     int digit;
     int largest = 0;
     int smallest = 9;
@@ -9,14 +11,14 @@ int main() {
 
     while(num>0){
         digit = num % 10 ;
-        if(digit>largest){
-            largest = digit;
+        if(digit > largest){
+            largest = digit ;
         }
         
         if(digit < smallest){
-            smallest = digit;
+            smallest = digit ;
         }
-        num = num /10;
+        num = num /10 ;
     }
     difference = largest - smallest;
 
