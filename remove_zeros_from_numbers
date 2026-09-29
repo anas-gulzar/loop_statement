@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int num = 102030;
-    int result = 0;
-    int place = 1;
+    long long num ;
+    printf("Enter numbers :");
+    scanf("%lld",&num);
+    long long result = 0;
+    long long place = 1;
 
     while (num > 0) {
         int digit = num  % 10;
@@ -15,5 +17,6 @@ int main() {
 
         num /= 10;
     }
-    printf("%d",result);
+    printf("%lld",result);
+    return 0;
 }
