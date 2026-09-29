@@ -3,9 +3,23 @@
 int main() {
     int num;
     printf("enter numbers :");
-    scanf("%d",&num);
-    int digit
-    difference = largest - smallest;
+    scanf("%d", &num);
+    int digit = 0;
+    int odd = 0;
+    int oddsum = 0;
+    int even = 0;
+    int evensum = 0;
 
-    printf("%d",difference);
+    while(num>0){
+        digit = num % 10;
+        if(digit % 2 == 0){
+            even++;
+            evensum = evensum + digit;
+        }else{
+            odd++;
+            oddsum = oddsum + digit;
+        }
+        num = num / 10;
+    }
+    printf("total odd digits : %d \n sum of odd : %d \n total even digits : %d \n sum of even : %d",odd, oddsum, even, evensum);
 }
