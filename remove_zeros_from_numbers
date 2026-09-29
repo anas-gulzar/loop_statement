@@ -1,1 +1,19 @@
+#include <stdio.h>
 
+int main() {
+    int num = 102030;
+    int result = 0;
+    int place = 1;
+
+    while (num > 0) {
+        int digit = num  % 10;
+
+        if (digit != 0) {
+            result = digit * place + result;
+            place *= 10;
+        }
+
+        num /= 10;
+    }
+    printf("%d",result);
+}
