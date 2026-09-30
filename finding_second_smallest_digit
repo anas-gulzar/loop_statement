@@ -1,1 +1,26 @@
+#include <stdio.h>
 
+int main() {
+    int num ;
+    printf("enter numbers:");
+    scanf("%d",&num);
+    int digit = 0;
+    int second = 9;
+    int smallest = 9;
+
+    while(num>0){
+        digit = num  % 10;
+        if(digit < smallest){
+            second = smallest;
+            smallest = digit;
+        }else if (digit > smallest && digit < second) {
+            second = digit;
+        }
+        num = num / 10;
+    }
+    if (second == 9) {
+    printf("-1");
+    } else {
+    printf("second smallest digit : %d", second);
+}
+}
