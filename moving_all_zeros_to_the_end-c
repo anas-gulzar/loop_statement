@@ -1,1 +1,30 @@
+#include <stdio.h>
 
+int main() {
+    int n;
+    printf("enter size :");
+    scanf("%d", &n);
+
+    int num[30];
+    printf("enter values one by one :");
+    for(int i=0; i<n; i++){
+        scanf("%d",&num[i]);
+    }
+
+    int j=0;
+    for(int i=0; i<n; i++){
+        if(num[i]!=0){
+            num[j] = num[i];
+            j++;
+        }
+    }
+
+    for(; j<n; j++){
+        num[j]=0;
+    }
+
+    printf("after moving all zeros to the end : ");
+    for(int i=0; i<n; i++){
+        printf("%d",num[i]);
+    }
+}
