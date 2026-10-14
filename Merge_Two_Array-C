@@ -1,1 +1,34 @@
+#include <stdio.h>
 
+int main() {
+    int n1;
+    printf("Enter size of first Array : ");
+    scanf("%d", &n1);
+    int num1[50];
+    printf("Enter first Array one by one : ");
+    for(int i=0; i<n1; i++){
+        scanf("%d", &num1[i]);
+    }
+    int n2;
+    printf("Enter size of second Array : ");
+    scanf("%d", &n2);
+    int num2[50];
+    printf("Enter second Array one by one : ");
+    for(int i=0; i<n2; i++){
+        scanf("%d", &num2[i]);
+    }
+    int n3 = n1 + n2;
+    int merged[100];
+
+    for(int i=0; i<n1; i++){
+        merged[i] = num1[i];
+    }
+    for(int j=0; j<n2; j++){
+        merged[n1 + j] = num2[j];
+    }
+
+    printf("Merged Array : ");
+    for(int i=0; i<n3; i++){
+        printf("%d ",merged[i]);
+    }
+}
