@@ -1,1 +1,44 @@
+#include <stdio.h>
 
+int main() {
+    int n;
+    printf("Enter Size of Array : ");
+    scanf("%d", &n);
+
+    if(n < 1 || n> 50){
+        printf("Size of Array Must be between 1 to 50");
+        return 0;
+    }
+    
+    int num[50];
+    printf("Enter Numbers one by one :");
+    for(int i=0; i<n; i++){
+        scanf("%d", &num[i]);
+    }
+    int element;
+    int maxcount = 0;
+    int count = 1;
+
+    for(int i=0; i<n-1; i++){
+        if(num[i] == num[i+1]){
+            count ++;
+        }else{
+            if(count > maxcount){
+                maxcount = count;
+                element = num[i];
+            }
+            count = 1;
+        }
+    }
+
+    if(count > maxcount){
+        maxcount = count;
+        element = num[n-1];
+    }
+
+    if(maxcount <=1){
+        printf("The %d repeats %d time!", element, maxcount);
+    }else{
+        printf("The %d repeats %d times!", element, maxcount);
+    }
+}
