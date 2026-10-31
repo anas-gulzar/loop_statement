@@ -37,8 +37,8 @@ int main() {
     }
 
     if(maxcount <=1){
-        printf("The %d repeats %d time!", element, maxcount);
+        printf("%d repeats %d time!", element, maxcount);
     }else{
-        printf("The %d repeats %d times!", element, maxcount);
+        printf("%d repeats %d times!", element, maxcount);
     }
 }
