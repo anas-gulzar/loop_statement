@@ -1,1 +1,35 @@
+#include <stdio.h>
 
+int main() {
+    int n;
+    printf("Enter Size of Array : ");
+    scanf("%d", &n);
+    int num[50];
+    printf("Enter Numbers one by one :");
+    for(int i=0; i<n; i++){
+        scanf("%d",&num[i]);
+    }
+    int equal = -1;
+
+    for(int i=0; i<n; i++){
+        int pre = 0;
+        int post = 0;
+        for(int j=0; j<i; j++){
+            pre = pre + num[j];
+        }
+        for(int k=i+1; k<n; k++){
+            post = post + num[k];
+        }
+
+        if(pre == post){
+            equal = i;
+            break;
+        }
+    }
+
+    if(equal != -1){
+        printf("Equilibrium index : %d", equal);
+    }else{
+        printf("No Equilibirium index Found!");
+    }
+}
