@@ -1,1 +1,23 @@
+#include <stdio.h>
 
+int main() {
+    int n;
+    printf("Enter Size of Array : ");
+    scanf("%d", &n);
+    if(n < 1 || n > 50){
+    printf("Invalid Array Size!");
+    return 0;
+    }
+    int num[50];
+    printf("Enter Number one by one : ");
+    for(int i=0; i<n; i++){
+        scanf("%d",&num[i]);
+    }
+    int sum = 0;
+
+    for(int i=0; i<n; i+=2){
+        sum += num[i];
+    }
+
+    printf("Sum of Alternate Array Element : %d", sum);
+}
